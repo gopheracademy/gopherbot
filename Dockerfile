@@ -7,5 +7,5 @@ ADD . /opt/src/gopherbot
 RUN cd /opt/src/gopherbot && go get -d
 RUN cd /opt/src/gopherbot && go build
 EXPOSE 8002
-ENTRYPOINT ["/opt/src/gopherbot/gopherbot"]
+ENTRYPOINT ["/opt/src/gopherbot/gopherbot -apiKey=$APIKEY -webhookToken=$WEBHOOKTOKEN"]
 
